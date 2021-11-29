@@ -1,0 +1,2 @@
+include 'jrostf2'
+include 'jrostf2.tests'
