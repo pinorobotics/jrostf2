@@ -1,9 +1,12 @@
 **jrostf2** - Java module which allows to interact with ROS TF2
 
+# Requirements
+
+Java 11+
+
 # Download
 
 [Release versions](https://github.com/pinorobotics/jrostf2/releases)
-[Latest prerelease version](https://github.com/pinorobotics/jrostf2/tree/main/jrostf2/release)
 
 Or you can add dependency to it as follows:
 
@@ -15,19 +18,11 @@ dependencies {
 }
 ```
 
-# Development
+# Documentation
 
-Building **jrostf2** module locally and making changes to it (this is optional and not intended for **jrostf2** users).
+[Documentation](http://pinoweb.freetzi.com/jrostf2)
 
-## With Eclipse
-
-- Build eclipse projects:
-
-``` bash
-gradle eclipse
-```
-
-- Import them into Eclipse
+[Development](DEVELOPMENT.md)
 
 # Contributors
 

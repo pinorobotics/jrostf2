@@ -65,7 +65,7 @@ public class JRosTf2 implements Closeable {
     /**
      * Creates a new instance of the client
      * @param client ROS client
-     * @param name of buffer action server
+     * @param actionServerName of buffer action server
      */
     public JRosTf2(JRosClient client, String actionServerName) {
         lookupTransformActionClient = new JRosActionClient<>(
@@ -74,7 +74,6 @@ public class JRosTf2 implements Closeable {
     
     /**
      * Request Buffer Server to calculate lookup transformation from source to target frame
-     * @throws JRosTf2Exception 
      */
     public LookupTransformResultMessage lookupTransform(String targetFrameId, String sourceFrameId) throws JRosTf2Exception {
         LOGGER.entering("lookupTransform");
