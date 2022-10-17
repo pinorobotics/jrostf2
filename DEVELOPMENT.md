@@ -1,4 +1,6 @@
-Building **jrostf2** module locally and making changes to it (this is optional and not intended for **jrostf2** users).
+# Making changes
+
+Building module locally and making changes to it (this is optional and not intended for the users).
 
 ## With Eclipse
 

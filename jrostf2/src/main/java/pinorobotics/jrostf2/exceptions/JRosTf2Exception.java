@@ -15,14 +15,13 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-/*
- * Authors:
- * - aeon_flux <aeon_flux@eclipso.ch>
- */
 package pinorobotics.jrostf2.exceptions;
 
 import pinorobotics.jrostf2.tf2_msgs.TF2ErrorMessage;
 
+/**
+ * @author aeon_flux aeon_flux@eclipso.ch
+ */
 public class JRosTf2Exception extends Exception {
 
     private static final long serialVersionUID = 1L;
@@ -36,6 +35,6 @@ public class JRosTf2Exception extends Exception {
     }
 
     public JRosTf2Exception(TF2ErrorMessage code) {
-        super(String.format("%s: %s", code.getCodeType(), code.error_string.data));        
+        super(String.format("%s: %s", code.getCodeType(), code.error_string.data));
     }
 }

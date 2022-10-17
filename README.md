@@ -1,8 +1,8 @@
-**jrostf2** - Java module which allows to interact with ROS TF2
+**jrostf2** - Java module which allows to interact with ROS1 TF2
 
 # Requirements
 
-Java 11+
+Java 17+
 
 # Download
 

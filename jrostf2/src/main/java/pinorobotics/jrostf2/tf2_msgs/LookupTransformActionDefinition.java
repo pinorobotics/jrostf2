@@ -1,7 +1,7 @@
 /*
  * Copyright 2021 jrostf2 project
  * 
- * Website: https://github.com/pinorobotics/jrosmoveit
+ * Website: https://github.com/pinorobotics/jrostf2
  * 
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -15,26 +15,26 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-/*
- * Authors:
- * - aeon_flux <aeon_flux@eclipso.ch>
- */
 package pinorobotics.jrostf2.tf2_msgs;
 
-import pinorobotics.jrosactionlib.msgs.ActionDefinition;
-import pinorobotics.jrosactionlib.msgs.ActionGoalMessage;
-import pinorobotics.jrosactionlib.msgs.ActionResultMessage;
+import pinorobotics.jros1actionlib.actionlib_msgs.Action1Definition;
+import pinorobotics.jros1actionlib.actionlib_msgs.Action1GoalMessage;
+import pinorobotics.jros1actionlib.actionlib_msgs.Action1ResultMessage;
 
-public class LookupTransformActionDefinition implements ActionDefinition<LookupTransformGoalMessage, LookupTransformResultMessage> {
+/**
+ * @author aeon_flux aeon_flux@eclipso.ch
+ */
+public class LookupTransformActionDefinition
+        implements Action1Definition<LookupTransformGoalMessage, LookupTransformResultMessage> {
 
     @Override
-    public Class<? extends ActionGoalMessage<LookupTransformGoalMessage>> getActionGoalMessage() {
+    public Class<? extends Action1GoalMessage<LookupTransformGoalMessage>> getActionGoalMessage() {
         return LookupTransformActionGoalMessage.class;
     }
 
     @Override
-    public Class<? extends ActionResultMessage<LookupTransformResultMessage>> getActionResultMessage() {
+    public Class<? extends Action1ResultMessage<LookupTransformResultMessage>>
+            getActionResultMessage() {
         return LookupTransformActionResultMessage.class;
     }
-
 }
