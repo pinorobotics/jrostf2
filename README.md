@@ -1,4 +1,4 @@
-**jrostf2** - Java module which allows to interact with ROS1 TF2
+**jrostf2** - Java module which allows to interact with TF2 in ROS1
 
 # Requirements
 
