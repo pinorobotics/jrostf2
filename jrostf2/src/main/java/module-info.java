@@ -19,16 +19,7 @@
  * Java module which allows to interact with <a href="http://wiki.ros.org/tf2">TF2</a> in ROS1
  * (Robot Operating System).
  *
- * <h2>Example</h2>
- *
- * <p>Request tf2_ros buffer_server to calculate lookup transformation from source "world" frame to
- * target frame "panda_hand" frame:
- *
- * <pre>{@code
- * var client = new JRos1ClientFactory().createClient();
- * var tf2 = new JRosTf2(client);
- * var result = tf2.lookupTransform("world", "panda_hand");
- * }</pre>
+ * <p>For usage examples see <a href="http://pinoweb.freetzi.com/jrostf2">Documentation</a>
  *
  * @see <a href="http://pinoweb.freetzi.com/jrostf2">Documentation</a>
  * @see <a href="https://github.com/pinorobotics/jrostf2/releases">Download</a>
