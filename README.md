@@ -18,7 +18,7 @@ Gradle:
 
 ```
 dependencies {
-    implementation 'io.github.pinorobotics:jrostf2:1.0'
+    implementation 'io.github.pinorobotics:jrostf2:2.0'
 }
 ```
 

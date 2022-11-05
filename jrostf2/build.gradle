@@ -52,6 +52,7 @@ javadoc {
     options.noNavBar = true;
     // ignore missing @return, @param etc
     options.addBooleanOption('Xdoclint:all,-missing', true)
+    exclude 'pinorobotics/jrostf2/impl/**'
 }
 
 def packageDir = "$buildDir/package/${projectName}"
