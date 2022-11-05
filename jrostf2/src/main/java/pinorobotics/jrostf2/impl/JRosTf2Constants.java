@@ -1,5 +1,5 @@
 /*
- * Copyright 2021 jrostf2 project
+ * Copyright 2022 jrostf2 project
  * 
  * Website: https://github.com/pinorobotics/jrostf2
  * 
@@ -15,20 +15,12 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package pinorobotics.jrostf2;
-
-import id.jrosmessages.Message;
-import java.io.Closeable;
-import pinorobotics.jrostf2.exceptions.JRosTf2Exception;
+package pinorobotics.jrostf2.impl;
 
 /**
- * Base interface which describes client to interact with ROS TF2 Buffer Server.
- *
- * @author aeon_flux aeon_flux@eclipso.ch
+ * @author lambdaprime intid@protonmail.com
  */
-public interface JRosTf2 extends Closeable {
+public interface JRosTf2Constants {
 
-    /** Request Buffer Server to calculate lookup transformation from source to target frame */
-    <R extends Message> R lookupTransform(String targetFrameId, String sourceFrameId)
-            throws JRosTf2Exception;
+    String TF2_BUFFER_SERVER_NAME = "/tf2_buffer_server";
 }

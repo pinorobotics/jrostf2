@@ -16,14 +16,15 @@
  * limitations under the License.
  */
 /**
- * Java module which allows to interact with <a href="http://wiki.ros.org/tf2">TF2</a> in ROS1
- * (Robot Operating System).
+ * Base Java module which allows to interact with <a href="http://wiki.ros.org/tf2">TF2</a> in ROS
+ * (Robot Operating System). It contains only interfaces and classes which are agnostic to ROS
+ * version.
  *
  * <p>For usage examples see <a href="http://pinoweb.freetzi.com/jrostf2">Documentation</a>
  *
  * @see <a href="http://pinoweb.freetzi.com/jrostf2">Documentation</a>
- * @see <a href="https://github.com/pinorobotics/jrostf2/releases">Download</a>
- * @see <a href="https://github.com/pinorobotics/jrostf2">GitHub repository</a>
+ * @see <a href="https://github.com/pinorobotics/jros1tf2">ROS1 implementation</a>
+ * @see <a href="https://github.com/pinorobotics/jros2tf2">ROS2 implementation</a>
  * @see <a href="http://wiki.ros.org/tf/Tutorials">TF Tutorial</a>
  * @see <a href="http://wiki.ros.org/tf2/Tutorials">TF2 Tutorial</a>
  * @see <a href="https://www.youtube.com/watch?v=Xf25dVrG5ks">Transformations explained</a>
@@ -34,11 +35,14 @@ module jrostf2 {
     // since many of our API relies on jrosclient and jrosactionlib
     // classes we need to ensure that all modules reading this module
     // also read them
-    requires transitive jros1client;
-    requires transitive jros1actionlib;
-    requires transitive jros1messages;
+    requires jrosmessages;
+    requires jrosactionlib;
     requires id.xfunction;
 
     exports pinorobotics.jrostf2;
+    exports pinorobotics.jrostf2.exceptions;
+    exports pinorobotics.jrostf2.impl to
+            jros1tf2,
+            jros2tf2;
     exports pinorobotics.jrostf2.tf2_msgs;
 }
