@@ -1,4 +1,8 @@
-**jrostf2** - Java module which allows to interact with TF2 in ROS1
+**jrostf2** - base Java module for interaction with TF2 in ROS (Robot Operating System). It contains only interfaces and classes which are agnostic to ROS version.
+
+For ROS2 see [jros2tf2](https://github.com/pinorobotics/jros2tf2)
+
+For ROS1 see [jros1tf2](https://github.com/pinorobotics/jros1tf2)
 
 # Requirements
 
