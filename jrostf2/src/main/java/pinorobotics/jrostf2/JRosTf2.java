@@ -18,7 +18,6 @@
 package pinorobotics.jrostf2;
 
 import id.jrosmessages.Message;
-import java.io.Closeable;
 import pinorobotics.jrostf2.exceptions.JRosTf2Exception;
 
 /**
@@ -26,9 +25,8 @@ import pinorobotics.jrostf2.exceptions.JRosTf2Exception;
  *
  * @author aeon_flux aeon_flux@eclipso.ch
  */
-public interface JRosTf2 extends Closeable {
+public interface JRosTf2<R extends Message> extends AutoCloseable {
 
     /** Request Buffer Server to calculate lookup transformation from source to target frame */
-    <R extends Message> R lookupTransform(String targetFrameId, String sourceFrameId)
-            throws JRosTf2Exception;
+    R lookupTransform(String targetFrameId, String sourceFrameId) throws JRosTf2Exception;
 }

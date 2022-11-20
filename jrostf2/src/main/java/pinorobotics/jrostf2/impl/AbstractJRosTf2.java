@@ -21,7 +21,6 @@ import id.jrosmessages.Message;
 import id.jrosmessages.primitives.Duration;
 import id.jrosmessages.std_msgs.StringMessage;
 import id.xfunction.logging.XLogger;
-import java.io.IOException;
 import pinorobotics.jrosactionlib.JRosActionClient;
 import pinorobotics.jrostf2.JRosTf2;
 import pinorobotics.jrostf2.exceptions.JRosTf2Exception;
@@ -32,7 +31,7 @@ import pinorobotics.jrostf2.tf2_msgs.TF2ErrorMessage;
  * @author aeon_flux aeon_flux@eclipso.ch
  */
 public abstract class AbstractJRosTf2<R extends Message & LookupTransformResult>
-        implements JRosTf2 {
+        implements JRosTf2<R> {
     private static final XLogger LOGGER = XLogger.getLogger(AbstractJRosTf2.class);
     private JRosActionClient<LookupTransformGoalMessage, R> lookupTransformActionClient;
     private LookupTransformGoalMessage goal =
@@ -62,7 +61,7 @@ public abstract class AbstractJRosTf2<R extends Message & LookupTransformResult>
     }
 
     @Override
-    public void close() throws IOException {
+    public void close() throws Exception {
         LOGGER.entering("close");
         lookupTransformActionClient.close();
         LOGGER.exiting("close");
