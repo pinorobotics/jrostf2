@@ -10,7 +10,7 @@ Java 17+
 
 # Download
 
-[Release versions](https://github.com/pinorobotics/jrostf2/releases)
+[Release versions](/jrostf2/release/CHANGELOG.md)
 
 Or you can add dependency to it as follows:
 
@@ -18,7 +18,7 @@ Gradle:
 
 ```
 dependencies {
-    implementation 'io.github.pinorobotics:jrostf2:2.0'
+  implementation 'io.github.pinorobotics:jrostf2:3.0'
 }
 ```
 
@@ -28,6 +28,6 @@ dependencies {
 
 [Development](DEVELOPMENT.md)
 
-# Contributors
+# Contacts
 
 aeon_flux <aeon_flux@eclipso.ch>

@@ -28,6 +28,15 @@ import java.util.Objects;
 /** Definition for tf2_msgs/LookupTransformGoal */
 @MessageMetadata(
         name = LookupTransformGoalMessage.NAME,
+        fields = {
+            "target_frame",
+            "source_frame",
+            "source_time",
+            "timeout",
+            "target_time",
+            "fixed_frame",
+            "advanced"
+        },
         md5sum = "35e3720468131d675a18bb6f3e5f22f8")
 public class LookupTransformGoalMessage implements Message {
 

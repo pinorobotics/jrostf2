@@ -24,7 +24,10 @@ import id.xfunction.XJson;
 import java.util.Objects;
 
 /** Definition for tf2_msgs/TF2Error */
-@MessageMetadata(name = TF2ErrorMessage.NAME, md5sum = "bc6848fd6fd750c92e38575618a4917d")
+@MessageMetadata(
+        name = TF2ErrorMessage.NAME,
+        fields = {"error", "error_string"},
+        md5sum = "bc6848fd6fd750c92e38575618a4917d")
 public class TF2ErrorMessage implements Message {
 
     static final String NAME = "tf2_msgs/TF2Error";
